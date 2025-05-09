@@ -1,0 +1,564 @@
+/* Body styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000; /* Black background for entire body */
+  color: white; /* White text */
+}
+
+/* Navbar Styling */
+.navbar {
+  background: #ffc107;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black; /* Yellow color for logo */
+}
+
+/* Navbar Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+}
+
+.logo-img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  border-radius: 50%; /* Makes the image round */
+  margin-right: 10px; /* Space between the logo and text */
+  object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+.navbar nav a {
+  margin: 0 1em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Banner Styling */
+.banner {
+  background: url('https://source.unsplash.com/1600x500/?shopping') center/cover no-repeat;
+  padding: 2em 0;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+.banner-heading h1 {
+  font-size: 48px;
+  color: white;
+  margin: 10px 0;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: brightness(60%);
+}
+
+.banner-text {
+  margin-top: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Categories Section */
+.categories {
+  padding: 30px 30px; /* Reduced padding to remove extra space */
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category-list a {
+  display: inline-block;
+  background: #ffc107;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.category-list a:hover {
+  transform: scale(1.05);
+}
+/* Product and Cart Grid */
+.product-grid, .cart-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Fixed size for grid items */
+  gap: 10px; /* Reduced space between grid items */
+  padding: 10px;
+  justify-content: center;
+}
+
+.product-card, .cart-item {
+  border: 1px solid #ddd;
+  padding: 10px; /* Reduced padding inside the card */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #333; /* Black background for cards */
+  color: white; /* White text */
+  max-width: 200px; /* Fixed width for each card */
+  margin: 0 auto; /* Center the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px; /* Fixed height for product images */
+  object-fit: cover; /* Ensure images fit within the container */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.product-card button {
+  background: #2874f0;
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Reduced padding for buttons */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+button {
+  background: #2874f0;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+.popup {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  background: #28a745;
+  color: white;
+  padding: 1em;
+  border-radius: 8px;
+  display: none;
+  animation: fadeInOut 3s forwards;
+}
+
+/* Contact Form */
+.contact-form {
+  padding: 2em;
+  text-align: center;
+}
+
+.contact-form input, .contact-form textarea {
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+  padding: 0.75em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.thank-you {
+  color: green;
+  margin-top: 1em;
+  display: none;
+}
+
+/* Dropdown Styling */
+section {
+  margin: 20px;
+  text-align: center;
+}
+
+.dropdown-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* White color for label */
+  margin-bottom: 10px;
+  display: block;
+}
+
+.dropdown {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.dropdown:hover {
+  background-color: #e0e0e0;
+}
+
+.dropdown:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Styling for Footer */
+.footer {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Follow Us Section */
+.follow-us {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 16px;
+  margin: 5px;
+  font-family: 'Arial', sans-serif;
+  animation: slideUp 1.5s ease-out forwards;
+  color: yellow; /* Yellow color for heading */
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #444;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effects for social icons */
+.social-icon:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.social-icon.facebook:hover {
+  background-color: #3b5998;
+}
+
+.social-icon.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.social-icon.instagram:hover {
+  background-color: #e4405f;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+
+/* Call-to-Action Button */
+.cta-button {
+  background: #ffc107;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e0a800;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #333;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: orange;
+  font-size: 32px;
+  margin-top: 1px;
+}
+
+.testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  color: #555;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.newsletter form {
+  margin-top: 20px;
+}
+
+.newsletter input {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background: #ffc107;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: #e0a800;
+}
+
+/* Services Section */
+.services {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service {
+  text-align: center;
+  max-width: 200px;
+}
+
+.service img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.service p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* Top Picks Section */
+.top-picks {
+  padding: 40px 20px;
+  text-align: center;
+  background: #333;
+  margin-top: o.2px;
+}
+
+.top-picks h2 {
+  color: orange;
+  font-size: 32px;
+  margin-top: 1px;
+}
+
+.top-picks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+  justify-content: center;
+}
+
+.top-pick-item {
+  background: gray;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-pick-item img {
+  width: 100%;
+  height: 150px; /* Fixed height for product images */
+  object-fit: cover; /* Ensure images fit within the container */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.top-pick-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.top-pick-item p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.top-pick-item button {
+  background: #2874f0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.top-pick-item button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+.top-pick-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Add to Cart Button */
+.top-pick-item button {
+  background: #2874f0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.top-pick-item button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+/* Popup Message */
+#popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

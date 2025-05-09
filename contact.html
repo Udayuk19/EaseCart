@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopEase - Contact</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-form" data-aos="zoom-in">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="thankYouMessage" style="display: none; color: green;">Thank you for contacting us!</div>    
+    </section>
+  </main>
+
+  <footer class="footer" data-aos="fade-in">
+    <div class="follow-us" data-aos="zoom-in">
+      <p>Follow Us On:</p>
+    </div>
+    <div class="social-icons" data-aos="flip-up">
+        <a href="https://facebook.com" target="_blank" class="social-icon facebook">Facebook</a>
+        <a href="https://twitter.com" target="_blank" class="social-icon twitter">Twitter</a>
+        <a href="https://instagram.com" target="_blank" class="social-icon instagram">Instagram</a>
+    </div>
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Show thank you message after form submission
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("contactForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
+</body>
+</html>

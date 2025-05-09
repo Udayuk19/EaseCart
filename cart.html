@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopEase - Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="cart-section" id="cart-items" data-aos="fade-up">
+    <h2>Your Cart</h2>
+    <div class="cart-list" data-aos="fade-in"></div>
+    <div class="cart-summary" data-aos="zoom-in">
+      <p>Total: ₹<span id="total-price">0</span></p>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </section>
+
+  <div id="popup" class="popup">Item removed from cart!</div>
+
+  <footer class="footer" data-aos="fade-in">
+    <div class="follow-us" data-aos="zoom-in">
+      <p>Follow Us On:</p>
+    </div>
+    <div class="social-icons" data-aos="flip-up">
+        <a href="https://facebook.com" target="_blank" class="social-icon facebook">Facebook</a>
+        <a href="https://twitter.com" target="_blank" class="social-icon twitter">Twitter</a>
+        <a href="https://instagram.com" target="_blank" class="social-icon instagram">Instagram</a>
+    </div>
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
