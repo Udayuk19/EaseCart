@@ -232,4 +232,3 @@ AOS.init({
   mirror: true, // Animations will trigger when scrolling back up
   offset: 200, // Offset in pixels before animation triggers
 });
-
